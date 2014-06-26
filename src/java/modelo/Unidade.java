@@ -48,9 +48,6 @@ public class Unidade implements Serializable {
     @OneToMany(mappedBy = "unidade")
     private List<Movimentacao> movimentacoes = new ArrayList<>();
     
-    //composicao
-    private InformacaoTecnica informacaoTecnica;
-    
     public Long getId() {
         return id;
     }
@@ -134,14 +131,7 @@ public class Unidade implements Serializable {
         this.movimentacoes = movimentacoes;
     }
 
-    public InformacaoTecnica getInformacaoTecnica() {
-        return informacaoTecnica;
-    }
-
-    public void setInformacaoTecnica(InformacaoTecnica informacaoTecnica) {
-        this.informacaoTecnica = informacaoTecnica;
-    }
-
+    
     
     @Override
     public int hashCode() {
