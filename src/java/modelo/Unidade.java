@@ -131,8 +131,7 @@ public class Unidade implements Serializable {
         this.movimentacoes = movimentacoes;
     }
 
-    
-    
+   
     @Override
     public int hashCode() {
         int hash = 0;
