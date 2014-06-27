@@ -5,14 +5,20 @@
 package modelo;
 
 import java.io.Serializable;
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
  * @author Gleywson
  */
-@Embeddable
+@Entity
 public class InformacaoBancaria implements Serializable{
+    @Id
+    @GeneratedValue
+    private Long Id;
+   
     private String banco;
     private String agencia;
     private String conta;
@@ -40,6 +46,16 @@ public class InformacaoBancaria implements Serializable{
     public void setConta(String conta) {
         this.conta = conta;
     }
+
+ 
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+    
     
     
 }

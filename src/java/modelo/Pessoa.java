@@ -65,9 +65,6 @@ public class Pessoa implements Serializable {
     private Barba barba;
     private Bigode bigode;
     private Olho olho;
-    private TituloEleitor tituloEleitor;
-    private Habilitacao habilitacao;
-    private InformacaoBancaria informacaoBancaria;
         
     //referencias
     @ManyToOne
@@ -87,9 +84,20 @@ public class Pessoa implements Serializable {
     
     //um para um - agregacao
     @OneToOne
+    private InformacaoBancaria informacaoBancaria;
+    
+    @OneToOne
+    private Habilitacao habilitacao;
+    
+    @OneToOne
+    TituloEleitor tituloEleitor;
+    
+    @OneToOne
     private Graduacao graduacao;
+    
     @OneToOne
     private Contato contato;
+    
     @OneToOne
     private Endereco endereco;
     

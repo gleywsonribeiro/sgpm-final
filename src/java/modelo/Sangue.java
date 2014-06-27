@@ -27,11 +27,8 @@ public class Sangue implements Serializable {
     private String tpSangue;
     
     @OneToMany(mappedBy = "sangue", fetch = FetchType.EAGER)
-    private List<Pessoa> pessoas;
+    private List<Pessoa> pessoas = new ArrayList<>();
 
-    public Sangue() {
-        this.pessoas = new ArrayList<>();
-    }
     
     public Long getId() {
         return id;

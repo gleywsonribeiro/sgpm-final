@@ -5,14 +5,20 @@
 package modelo;
 
 import java.io.Serializable;
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
  * @author Gleywson
  */
-@Embeddable
+@Entity
 public class Habilitacao implements Serializable{
+    @Id
+    @GeneratedValue
+    private Long id;
+    
     private String numeroHabilitacao;
     private String categoria;
 
@@ -30,6 +36,15 @@ public class Habilitacao implements Serializable{
 
     public void setCategoria(String categoria) {
         this.categoria = categoria.toUpperCase();
+    }
+
+    
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
     
     
