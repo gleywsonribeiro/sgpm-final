@@ -16,15 +16,16 @@ import javax.persistence.OneToOne;
  * @author Gleywson
  */
 @Entity
-public class Usuario implements Serializable {
-    @OneToOne
-    private Pessoa pessoa;
+public class Usuario implements Serializable {  
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
     private Long id;
     private String login;
     private String senha;
+    
+    @OneToOne
+    private Pessoa pessoa;
     
     @ManyToOne
     private Perfil perfil;
