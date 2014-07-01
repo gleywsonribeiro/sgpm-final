@@ -23,13 +23,18 @@ public class Punicao implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
+    
     @Temporal(TemporalType.DATE)
     private Date dataAplicacao;
+    
     @Temporal(TemporalType.DATE)
     private Date dataSuspensao;
+    
     private String publicacao;
     @Temporal(TemporalType.DATE)
+    
     private Date dataCancelamento;
+    
     private String docCancelamento;
     
     @ManyToOne

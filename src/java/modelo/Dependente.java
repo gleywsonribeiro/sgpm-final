@@ -37,6 +37,19 @@ public class Dependente implements Serializable {
     @ManyToOne
     private Pessoa pessoa;
     
+    @ManyToOne
+    private Parentesco parentesco;
+
+    public Parentesco getParentesco() {
+        return parentesco;
+    }
+
+    public void setParentesco(Parentesco parentesco) {
+        this.parentesco = parentesco;
+    }
+    
+    
+    
     public Long getId() {
         return id;
     }
